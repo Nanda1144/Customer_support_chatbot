@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-headset"></i>
+                <span>Customer Support</span>
+            </div>
+            <div class="chatbot-actions">
+                <button class="color-picker-btn" id="colorPickerBtn" title="Change Theme">
+                    <i class="fas fa-palette"></i>
+                </button>
+                <button class="minimize-btn" id="minimizeBtn" title="Minimize">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="close-btn" id="closeBtn" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                <div class="message-avatar bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    Hello! I'm your customer support assistant. How can I help you today?
+                </div>
+                <div class="message-time">9:00 AM</div>
+            </div>
+        </div>
+        
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            Assistant is typing...
+        </div>
+        
+        <div class="chatbot-input-container">
+            <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+            <button class="send-button" id="sendButton" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+        
+        <div class="color-picker" id="colorPicker">
+            <div class="color-option" data-color="blue" style="background-color: #4a6bdf;"></div>
+            <div class="color-option" data-color="green" style="background-color: #28a745;"></div>
+            <div class="color-option" data-color="purple" style="background-color: #6f42c1;"></div>
+            <div class="color-option" data-color="red" style="background-color: #dc3545;"></div>
+            <div class="color-option" data-color="teal" style="background-color: #20c997;"></div>
+            <div class="color-option" data-color="orange" style="background-color: #fd7e14;"></div>
+        </div>
+    </div>
+    
+    <div class="chatbot-launcher" id="chatbotLauncher">
+        <div class="launcher-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="launcher-text">
+            <span>Need help?</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
